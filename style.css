@@ -1,0 +1,176 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+:root{
+    /*Font Size*/
+    font-size:62,5%;
+    --fs-padrão:1.6rem;
+
+    /*Font Family*/
+    --ft-text: 'Palanquin', sans-serif;
+    --ft-titles: 'Staatliches', cursive;
+
+    /* Colors*/
+    --cl-header:#8E9AAF;
+    --cl-h1Back:#CBC0D3;
+    --cl-background:#EFF1FF;
+    --cl-text:#23053A;
+    --cl-h2Back:#FEEAFA;
+    --cl-h1:#FFFFFF;
+    --cl-h2:#4A4E69;
+    --sh-text:rgba(0, 0, 0, 0.25);
+
+
+}
+
+body{
+    background-color: var(--cl-background);
+    font-size: var(--fs-padrão);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.page{
+    max-width: 38.4rem;
+    margin: 0 auto;
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+header{
+    background-color: var(--cl-header);
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-bottom: 3.4rem;
+
+}
+
+.title h1{
+    
+    color:var(--cl-h1);
+
+    font-family: var(--ft-titles);
+    font-weight: 400;
+    font-size: 3.5rem;
+    line-height:33.4rem;;
+    letter-spacing: 0.3rem;
+
+    text-shadow: 0.2rem 0.2rem var(--sh-text);
+    
+  
+    
+}
+
+.title{
+    background-color: var(--cl-h1Back);
+    width: 100%;
+    height: 4.9rem;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header img {
+    padding-top:3.2rem;
+    padding-bottom:3.2rem;
+    
+    width: 21.5rem;
+
+}
+
+main {
+    font-family: var(--ft-text);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:2em;
+
+    padding-top: 1.5rem;
+}
+
+.card p{
+    color:var(--cl-text);
+    font-weight: 400;
+    font-size: 1.0rem;
+    line-height: 1.5rem;
+
+    text-align: center;
+    padding: 1.9rem;;
+    
+}
+
+
+.card img{
+    object-fit: cover;
+
+    animation: downtop 700ms 200ms;
+   
+}
+
+.card h2 {
+    position: absolute; 
+    right:1.6rem;
+    top:1.6rem;
+
+    text-transform: uppercase;
+    font-style: 400;
+    font-size:1.0rem;
+    line-height: 34px;
+    letter-spacing: 5%;
+    color: var(--cl-h2);
+    background-color: var(--cl-h2Back);
+    border-radius: 2.0rem;
+    font-family: var(--ft-title);
+    padding: 1px 24px 1px 24px;
+
+    animation: topdown 700ms 200ms;
+}
+
+
+.card {
+    position: relative;
+}
+
+@keyframes topdown{
+    0%{
+      opacity: 0;
+      transform: translateY(-3.5rem);
+    }
+    50%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0rem);
+  
+    }
+  }
+  
+  @keyframes downtop{
+    0%{
+      opacity: 0;
+      transform: translateY(0);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(-2.1rem);
+    }
+  }
